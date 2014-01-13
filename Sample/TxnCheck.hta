@@ -1,0 +1,40 @@
+<html>
+<head>
+ <TITLE>SAP Transaction Check</TITLE>
+  <HTA:APPLICATION ID="oMyApp" 
+    APPLICATIONNAME="Transaction Check" 
+    SHOWINTASKBAR="yes"
+    SINGLEINSTANCE="yes">
+<!--
+    ICON="c:\oracle\ora92\oo4o\oo4o.ico"
+    SYSMENU="yes"
+    BORDER="none"
+    CAPTION="no"
+    WINDOWSTATE="maximize">
+  -->  
+	<script src="js/common.js" type="text/javascript"></script> 
+	<script src="js/jscript.string.js" type="text/javascript"></script> 
+	<!-- script src="js/sap_r3_new.js" type="text/javascript"></script --> 
+	<!-- script src="js/apps/TxnCheck_new.js" type="text/javascript"></script --> 
+	<script src="js/sap_r3.js" type="text/javascript"></script> 
+	<script src="js/apps/TxnCheck.js" type="text/javascript"></script> 
+</head>
+
+<body onUnload="javascript:disconnectFromSap();">
+	<form name="jobStatus">
+		<span style="line-height: 2em; margin: 2em;">
+			User ID: <input id="sapUserid"   type="text"     name="sapUserid"   size="12" />
+			Password:<input id="sapPassword" type="password" name="sapPassword" size="8" />
+		</span>
+		<hr>
+		<span style="line-height: 2em; margin: 2em;">
+			User to test:<input id="tstUserid" type="text" name="tstUserid" size="12" />
+			Transaction: <input id="tstTrans"  type="text" name="tstTrans"  size="12" />
+			<input type="button" value="Check" onClick="javascript:connectToSap();" />
+		</span>
+		<hr>
+		<span id="sapResultsTable">
+		</span>
+	</form>
+	</body>
+</html>

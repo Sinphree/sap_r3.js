@@ -1,0 +1,19 @@
+<?XML version="1.0"?>
+<package>
+<job name="Check_User">
+<comment>
+Check the status of a user in SAP
+</comment>
+
+<runtime>
+<named name="user" type="string" helpstring="User ID to check" required="false" />
+<named name="emp"  type="string" helpstring="Employee Number"  required="false" />
+</runtime>
+
+<script src="js/jscript.string.js"  type="text/javascript"></script> 
+<script src="js/pwd.js"             type="text/javascript"></script> 
+<script src="js/sap_r3.js"          type="text/javascript"></script> 
+<script src="js/user_check.js"      type="text/javascript"></script> 
+
+</job>
+</package>
